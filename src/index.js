@@ -12,7 +12,7 @@ const orderCart = (state = [], action) => {
   } else if(action.type === 'REMOVE_PIZZA') {
     const matchPizza = pizza => pizza._id !== action.payload._id;
     return state.filter(matchPizza);
-  } else if(action.type === 'RESET_CART') {
+  } else if(action.type === 'RESET') {
     return [];
   }
   return state;
@@ -21,7 +21,7 @@ const orderCart = (state = [], action) => {
 const customerInfo = (state = {}, action) => {
   if(action.type === 'ADD_CUSTOMER') {
     return action.payload;
-  } else if(action.type === 'RESET_CUSTOMER') {
+  } else if(action.type === 'RESET') {
     return {};
   }
   return state;

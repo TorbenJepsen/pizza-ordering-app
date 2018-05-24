@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import PizzaItem from '../SelectPizza/PizzaItem/PizzaItem';
 import './SelectPizza.css';
-import { Link } from 'react-router-dom';
-
 
 const mapReduxStateToProps = (reduxState) => (
   { reduxState }
 );
-
-
 
 class SelectPizza extends Component {
   constructor(props) {

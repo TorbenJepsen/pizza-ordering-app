@@ -50,7 +50,6 @@ class PizzaItem extends Component {
           </div>
         </div>
       </div>
-
     );
   }
 }

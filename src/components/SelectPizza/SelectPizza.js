@@ -13,7 +13,7 @@ class SelectPizza extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      pizzaItems: []
+      pizzaItems: [],
     };
   }
 

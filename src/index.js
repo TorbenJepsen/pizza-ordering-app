@@ -27,10 +27,24 @@ const customerInfo = (state = {}, action) => {
   return state;
 };
 
+const orderTotal = (state = 0, action) => {
+  if(action.type === 'ADD_PIZZA') {
+    let pizzaCost = Math.round(state * 100 + action.payload.cost * 100) / 100;
+    return pizzaCost;
+  } else if(action.type === 'REMOVE_PIZZA') {
+    let pizzaCost = Math.round(state * 100 - action.payload.cost * 100) / 100;
+    return pizzaCost;
+  } else if(action.type === 'RESET') {
+    return 0;
+  }
+  return state;
+};
+
 const storeInstance = createStore(
   combineReducers({
     orderCart,
     customerInfo,
+    orderTotal,
   }),
   applyMiddleware(logger),
 );

@@ -19,7 +19,7 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <h1 className="App-title">Prime Pizza</h1>
-            <h4>Total: ${this.props.reduxState.orderTotal}</h4>
+            <h3>Total: ${this.props.reduxState.orderTotal}</h3>
           </header>
           <Route exact path='/' component={SelectPizza} />
           <Route exact path='/customer' component={CustomerInfo} />

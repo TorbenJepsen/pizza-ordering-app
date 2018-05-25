@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import './Checkout.css';
 
 const mapReduxStateToProps = (reduxState) => (
   { reduxState }
@@ -46,7 +47,7 @@ class Checkout extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.reduxState.orderCart.map((pizza) => <tr key={pizza._id}><td>{pizza.name}</td><td>$ {pizza.cost}</td></tr>)}
+            {this.props.reduxState.orderCart.map((pizza) => <tr key={pizza._id}><td>{pizza.name}</td><td>${pizza.cost}</td></tr>)}
           </tbody>
         </table>
         <h3>Total: ${this.props.reduxState.orderTotal}</h3>
